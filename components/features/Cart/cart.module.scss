@@ -1,0 +1,82 @@
+@use '../../../styles/colors.module.scss'as c;
+
+.container {
+    display        : flex;
+    flex-flow      : column;
+    justify-content: center;
+    align-items    : center;
+    height         : 40vh;
+    width          : 30vw;
+    row-gap        : 0.5rem;
+    min-width      : 600px;
+    width          : 80vw;
+    height         : fit-content;
+    border         : 4px solid c.$primary-500;
+    box-shadow     : c.$box-shadow-form;
+    border-radius  : 1.5rem;
+}
+
+.button_container {
+    width        : 100%;
+    text-align   : center;
+    margin-bottom: 1rem;
+}
+
+.title {
+    margin-top: 1rem;
+}
+
+.headers {
+    display        : flex;
+    width          : 100%;
+    flex-flow      : row;
+    justify-content: space-around;
+    align-items    : center;
+    margin         : 1rem 0;
+}
+
+.hr {
+    width        : 90%;
+    margin-bottom: 1rem;
+}
+
+.product {
+    display        : flex;
+    width          : 100%;
+    flex-flow      : row;
+    justify-content: space-around;
+    align-items    : center;
+    margin         : 1rem 0;
+}
+
+.amount {
+    display        : flex;
+    flex-flow      : row;
+    align-items    : center;
+    justify-content: center;
+}
+
+.data_container {
+    width     : 25%;
+    text-align: center;
+}
+
+.discount_container,
+.total_price_container {
+    display        : flex;
+    width          : 100%;
+    flex-direction : row;
+    justify-content: space-between;
+
+}
+
+.error {
+    padding-bottom: 1rem;
+    width         : 100%;
+    text-align    : center;
+    color         : c.$red-500;
+}
+
+.red {
+    color: c.$red-500;
+}

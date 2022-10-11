@@ -1,0 +1,17 @@
+@use '../../styles/colors.module.scss'as c;
+
+.container {
+    display        : flex;
+    flex-flow      : column;
+    justify-content: center;
+    align-items    : center;
+    height         : 40vh;
+    width          : 30vw;
+    row-gap        : 0.5rem;
+    min-width      : 320px;
+    max-width      : 380px;
+    height         : fit-content;
+    border         : 4px solid c.$primary-500;
+    box-shadow     : c.$box-shadow-form;
+    border-radius  : 1.5rem;
+}

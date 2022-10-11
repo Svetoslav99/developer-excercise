@@ -1,0 +1,49 @@
+@use '../../../styles/colors.module.scss'as c;
+
+.input {
+    outline     : 0;
+    border-width: 0 0 1px;
+    border-color: c.$gray-300;
+    width       : 100%;
+    max-width   : 60%;
+    height      : 32px;
+    font-size   : 1.5rem;
+
+    &::placeholder {
+        color      : c.$gray-300;
+        font-size  : 24px;
+        line-height: 30px;
+    }
+}
+
+.button-container {
+    margin: 1rem 0;
+}
+
+.title {
+    font-weight: 700;
+    font-size  : 2rem;
+    line-height: 4rem;
+    color      : c.$gray-800;
+    text-shadow: c.$text-shadow-black-800;
+}
+
+.label {
+    font-style : normal;
+    font-weight: 700;
+    color      : c.$gray-800;
+    font-size  : 1.5rem;
+}
+
+.response {
+    padding-bottom: 1rem;
+    width         : 60%;
+
+    &--error {
+        color: c.$red-500;
+    }
+
+    &--success {
+        color: c.$primary-500;
+    }
+}
