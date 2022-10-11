@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 
-import {signIn} from 'next-auth/react';
-
 const Index: React.FC = () => {
     return (
         <>
