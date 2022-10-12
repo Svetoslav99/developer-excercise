@@ -18,6 +18,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## Folder structure
+
+```
 .
     ├── @types                  # Different typescript exported types used in the application.
     ├── components              # React components with their 'module.scss' styling files.
@@ -29,5 +31,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
     ├── styles                  # Contains global scss style files.
     ├── .example.env            # Contains an example of '.env' keys and what values do they expect.
     └── demo.mkv                # Demo video of the working application.
+    
+    ```
 
 
