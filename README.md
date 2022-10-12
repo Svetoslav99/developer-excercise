@@ -23,9 +23,14 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 .
     ├── @types                  # Different typescript exported types used in the application.
     ├── components              # React components with their 'module.scss' styling files.
-    ├── context                 # React context.
+         ├── features           # Main features of the application are splitted in their own folder in here.
+         ├── layout             # Application layout react component.
+         ├── ui                 # UI custom react components (e.g. Button, Form).
+    ├── context                 # Contains react cart context file and cart provider file.
     ├── enums                   # Enums that are used in the application.
     ├── pages                   # Next.js specific folder that contains the routing of the application, as well as the api endpoints.
+        ├── api                 # Contains application api endpoints 
+        ├── ./...               # Contains application routing index files.
     ├── prisma                  # ORM that is used to create database models and to help us with type safety.
     ├── public                  # Folder that contains image files used in the application.
     ├── styles                  # Contains global scss style files.
