@@ -24,6 +24,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         const data: ReqBodyPost = req.body;
 
         try {
+            if (!data.name) {
+                throw new Error('Don`t mess with the product name field, please!');
+            }
+
+            if (!data.price) {
+                throw new Error('Don`t mess with the price field, please!');
+            }
+
+            if (
+                data.deal !== specialDeal.buy1GetSecondOnHalfPrice &&
+                data.deal !== specialDeal.buy2Get3 &&
+                data.deal !== specialDeal.noDeal
+            ) {
+                throw new Error('Don`t mess with the special deal types, please!');
+            }
+
             await prisma.$connect();
             const productExists = await prisma.product.findUnique({
                 where: {
@@ -33,14 +49,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
             if (productExists) {
                 throw new Error('Product with such name already exists.');
-            }
-
-            if (
-                data.deal !== specialDeal.buy1GetSecondOnHalfPrice &&
-                data.deal !== specialDeal.buy2Get3 &&
-                data.deal !== specialDeal.noDeal
-            ) {
-                throw new Error('Don`t mess with the special deal types, please!');
             }
 
             const insertProduct = await prisma.product.create({
@@ -74,6 +82,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         const data: ReqBodyDelete = req.body;
 
         try {
+            if (!data.name) {
+                throw new Error('Don`t mess with the product name field, please!');
+            }
+
             await prisma.$connect();
             const productExists = await prisma.product.findUnique({
                 where: {
