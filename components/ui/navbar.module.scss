@@ -2,7 +2,6 @@
 
 .container {
     background-color: c.$primary-500;
-    min-width       : 600px;
 
     &__navigation {
         display        : flex;
@@ -11,6 +10,7 @@
         align-items    : center;
         margin-right   : 4rem;
         height         : 10vh;
+
 
 
         @media screen and (max-width:440px) {
@@ -41,8 +41,10 @@
         height         : 100%;
     }
 
-    @media screen and (max-width:440px) {
+    @media screen and (max-width:490px) {
+        font-size: 1rem;
         margin: 0 1rem;
+        padding        : 0;
     }
 
     &:hover {
