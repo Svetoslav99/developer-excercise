@@ -2,9 +2,9 @@ import React, { useContext, useState } from 'react';
 import { Formik, Field } from 'formik';
 import cn from 'classnames';
 
-import CartContext from '../../../context/cart-context';
-import { Product, ProductWithAmount } from '../../../@types/product';
 import { Form, Button } from '../../';
+import CartContext from '../../../context/cart-context';
+import { ProductWithAmount } from '../../../@types/product';
 import classes from './deleteProduct.module.scss';
 
 type ResponseData = {

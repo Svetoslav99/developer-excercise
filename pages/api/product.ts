@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { PrismaClient } from '@prisma/client';
 import { specialDeal } from '../../enums';
-import { Product } from '../../@types/product';
 
 const prisma = new PrismaClient();
 
@@ -53,13 +52,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
             });
 
             if (!insertProduct) {
-                throw new Error(`Something went wrong while trying to add new product.`);
+                throw new Error('Something went wrong while trying to add new product.');
             }
 
             await prisma.$disconnect();
 
             return res.status(201).json({
-                message: `Successfully added new product!`,
+                message: 'Successfully added new product!',
                 error: false
             });
         } catch (error) {

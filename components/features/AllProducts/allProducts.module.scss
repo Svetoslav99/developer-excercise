@@ -9,7 +9,7 @@
     row-gap        : 5rem;
 
     @media screen and (max-width:440px) {
-        width: 100vw;
+        width          : 100vw;
         display        : flex;
         flex-flow      : column;
         justify-content: center;

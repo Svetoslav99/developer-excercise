@@ -2,9 +2,8 @@ import React, { useContext } from 'react';
 import cn from 'classnames';
 
 import { Button } from '../../';
-import { specialDeal } from '../../../enums';
-
 import CartContext from '../../../context/cart-context';
+import { specialDeal } from '../../../enums';
 import { Product, ProductWithAmount } from '../../../@types/product';
 import classes from './allProducts.module.scss';
 

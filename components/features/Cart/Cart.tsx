@@ -2,9 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import Image from 'next/image';
 import cn from 'classnames';
 
-import { specialDeal } from '../../../enums';
 import { Button } from '../../';
 import CartContext from '../../../context/cart-context';
+import { specialDeal } from '../../../enums';
 import classes from './cart.module.scss';
 
 type ResponseData = {
