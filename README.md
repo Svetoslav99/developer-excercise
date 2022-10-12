@@ -32,6 +32,6 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
     ├── .example.env            # Contains an example of '.env' keys and what values do they expect.
     └── demo.mkv                # Demo video of the working application.
     
-    ```
+```
 
 
